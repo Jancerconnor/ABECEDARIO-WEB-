@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Abecedario de Animales Interactivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #fff8e1);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+      margin: 0;
+      font-size: 1.8em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .card p {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #333;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .description {
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: #555;
+      display: none;
+    }
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+      .card img {
+        height: 100px;
+      }
+      h1 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Abecedario Web: Cada letra define un animal 🐾</h1>
+  <div class="grid">
+    <div class="card" data-desc="Las abejas producen miel y son vitales para la polinización.">
+      <img src="img/a_abeja.png" alt="Abeja"><p>A de Abeja</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La ballena es un enorme mamífero marino que habita los océanos.">
+      <img src="img/b_ballena.png" alt="Ballena"><p>B de Ballena</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El cangrejo vive en playas y fondos marinos, tiene pinzas fuertes.">
+      <img src="img/c_cangrejo.png" alt="Cangrejo"><p>C de Cangrejo</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El delfín es un mamífero inteligente que nada en el mar.">
+      <img src="img/d_delfin.png" alt="Delfín"><p>D de Delfín</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El elefante es el mamífero terrestre más grande, con trompa larga.">
+      <img src="img/e_elefante.png" alt="Elefante"><p>E de Elefante</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La foca vive en aguas frías y es excelente nadadora.">
+      <img src="img/f_foca.png" alt="Foca"><p>F de Foca</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El gato es un felino doméstico muy ágil y curioso.">
+      <img src="img/g_gato.png" alt="Gato"><p>G de Gato</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El hámster es un pequeño roedor que suele vivir en jaulas como mascota.">
+      <img src="img/h_hamster.png" alt="Hámster"><p>H de Hámster</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La iguana es un reptil que suele vivir en zonas cálidas y tropicales.">
+      <img src="img/i_iguana.png" alt="Iguana"><p>I de Iguana</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La jirafa es un mamífero con cuello muy largo que se alimenta de hojas de árboles altos.">
+      <img src="img/j_jirafa.png" alt="Jirafa"><p>J de Jirafa</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El koala es un marsupial australiano que se alimenta de hojas de eucalipto.">
+      <img src="img/k_koala.png" alt="Koala"><p>K de Koala</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El león es el rey de la selva, un felino fuerte y social.">
+      <img src="img/l_leon.png" alt="León"><p>L de León</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El mono es un primate juguetón y muy ágil que vive en árboles.">
+      <img src="img/m_mono.png" alt="Mono"><p>M de Mono</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La nutria es un mamífero acuático que juega y nada muy bien.">
+      <img src="img/n_nutria.png" alt="Nutria"><p>N de Nutria</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El ñandú es un ave grande que no vuela, originaria de Sudamérica.">
+      <img src="img/ñ_ñandu.png" alt="Ñandú"><p>Ñ de Ñandú</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El oso es un mamífero grande que habita bosques y montañas.">
+      <img src="img/o_oso.png" alt="Oso"><p>O de Oso</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El perro es un animal doméstico fiel y juguetón.">
+      <img src="img/p_perro.png" alt="Perro"><p>P de Perro</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El quetzal es un ave colorida y emblemática de América Central.">
+      <img src="img/q_quetzal.png" alt="Quetzal"><p>Q de Quetzal</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La rana es un anfibio que puede vivir en agua y tierra.">
+      <img src="img/r_rana.png" alt="Rana"><p>R de Rana</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La serpiente es un reptil alargado que se desplaza sin patas.">
+      <img src="img/s_serpiente.png" alt="Serpiente"><p>S de Serpiente</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El tigre es un felino grande y fuerte con rayas características.">
+      <img src="img/t_tigre.png" alt="Tigre"><p>T de Tigre</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La urraca es un ave muy inteligente y con plumaje llamativo.">
+      <img src="img/u_urraca.png" alt="Urraca"><p>U de Urraca</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="La vaca es un mamífero doméstico que da leche y vive en granjas.">
+      <img src="img/v_vaca.png" alt="Vaca"><p>V de Vaca</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El wombat es un marsupial australiano pequeño y robusto.">
+      <img src="img/w_wombat.png" alt="Wombat"><p>W de Wombat</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El xoloitzcuintle es un perro mexicano sin pelo, muy antiguo.">
+      <img src="img/x_xoloitzcuintle.png" alt="Xoloitzcuintle"><p>X de Xoloitzcuintle</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El yak es un bóvido que vive en zonas montañosas y frías.">
+      <img src="img/y_yak.png" alt="Yak"><p>Y de Yak</p>
+      <div class="description"></div>
+    </div>
+    <div class="card" data-desc="El zorro es un mamífero astuto que vive en bosques y campos.">
+      <img src="img/z_zorro.png" alt="Zorro"><p>Z de Zorro</p>
+      <div class="description"></div>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const desc = card.getAttribute('data-desc');
+        const descDiv = card.querySelector('.description');
+        descDiv.textContent = desc;
+        descDiv.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
